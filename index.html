@@ -3,254 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bahae Aouanet | Ingénieur Full Stack</title>
+    <title>Bahae Aouanet - Interface Neuronale | Ingénieur Full Stack</title>
+    <meta name="description" content="Portfolio immersif de Bahae Aouanet - Ingénieur informatique full stack spécialisé en développement web, mobile et intelligence artificielle">
     
     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <!-- AOS Animation -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- AOS Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Intro Sequence -->
-    <div id="intro-sequence" class="intro-container">
+    <!-- Neural Interface Loader -->
+    <div id="neural-loader" class="neural-loader">
         <div class="neural-background">
-            <div class="particles"></div>
-            <div class="data-flow"></div>
+            <div class="neural-grid"></div>
+            <div class="neural-particles"></div>
+            <div class="neural-spiral"></div>
         </div>
         
-        <div class="intro-content">
+        <div class="neural-interface">
+            <div class="neural-logo">
+                <div class="logo-ring"></div>
+                <div class="logo-core">BA</div>
+            </div>
+            
+            <div class="neural-text">
+                <div id="neural-typed"></div>
+            </div>
+            
             <div class="neural-scanner">
                 <div class="scanner-line"></div>
             </div>
             
-            <div class="intro-text">
-                <h1 class="intro-title">Salut !</h1>
-                <p class="intro-description">Je suis Bahae, développeur passionné par la création d'expériences numériques uniques.</p>
-                <div class="loading-bar">
-                    <div class="progress-line"></div>
-                </div>
-            </div>
-            
-            <div class="intro-logo">
-                <div class="logo-3d">
-                    <span class="logo-letter">B</span>
-                    <span class="logo-letter">A</span>
-                </div>
-                <div class="logo-subtitle">Ingénieur Full Stack</div>
-            </div>
-            
-            <button class="enter-btn" id="enter-interface">
-                <span class="btn-text">Accéder au profil</span>
-                <i class="fas fa-arrow-right"></i>
+            <button id="enter-interface" class="neural-button" style="display: none;">
+                <span class="button-glow"></span>
+                <i class="fas fa-unlock"></i>
+                <span>Entrer dans l'interface</span>
             </button>
-        </div>
-        
-        <div class="skip-intro">
-            <button id="skip-intro">Passer l'introduction</button>
         </div>
     </div>
 
-    <!-- Main Portfolio -->
-    <div id="main-portfolio" class="main-content" style="display: none;">
-        
-        <!-- Navigation -->
-        <nav class="neural-navbar fixed-top">
+    <!-- Main Interface -->
+    <div id="main-interface" class="main-interface" style="display: none;">
+        <!-- Neural Navigation -->
+        <nav class="neural-nav fixed-top">
             <div class="container-fluid">
-                <div class="nav-content">
-                    <div class="nav-brand">
-                        <div class="brand-logo">
-                            <span class="logo-letter">B</span>
-                            <span class="logo-letter">A</span>
-                        </div>
-                        <span class="brand-text">Bahae Aouanet</span>
-                    </div>
-                    
-                    <div class="nav-links">
-                        <a href="#accueil" class="nav-link active">Interface</a>
-                        <a href="#identite" class="nav-link">Identité</a>
-                        <a href="#competences" class="nav-link">Savoir-faire</a>
-                        <a href="#projets" class="nav-link">Projets</a>
-                        <a href="#parcours" class="nav-link">Parcours</a>
-                        <a href="#services" class="nav-link">Services</a>
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </div>
-                    
-                    <div class="nav-toggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                <div class="nav-brand">
+                    <div class="brand-logo">BA</div>
+                    <span class="brand-text">Neural Interface</span>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="#identity" class="nav-link" data-section="identity">
+                        <i class="fas fa-brain"></i><span>Identité</span>
+                    </a>
+                    <a href="#skills" class="nav-link" data-section="skills">
+                        <i class="fas fa-microchip"></i><span>Savoir-faire</span>
+                    </a>
+                    <a href="#projects" class="nav-link" data-section="projects">
+                        <i class="fas fa-memory"></i><span>Projets</span>
+                    </a>
+                    <a href="#experience" class="nav-link" data-section="experience">
+                        <i class="fas fa-timeline"></i><span>Parcours</span>
+                    </a>
+                    <a href="#services" class="nav-link" data-section="services">
+                        <i class="fas fa-cogs"></i><span>Services</span>
+                    </a>
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <i class="fas fa-satellite-dish"></i><span>Contact</span>
+                    </a>
+                </div>
+                
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </nav>
 
-        <!-- Section Accueil - Interface Cérébrale -->
-        <section id="accueil" class="section-cerebral">
-            <div class="neural-grid"></div>
-            <div class="floating-particles"></div>
+        <!-- Hero Section - Interface Cérébrale -->
+        <section id="hero" class="hero-section">
+            <div class="neural-background-main">
+                <div class="dataflow-container">
+                    <div class="dataflow-line" style="--delay: 0s"></div>
+                    <div class="dataflow-line" style="--delay: 0.5s"></div>
+                    <div class="dataflow-line" style="--delay: 1s"></div>
+                    <div class="dataflow-line" style="--delay: 1.5s"></div>
+                </div>
+                <div class="neural-network">
+                    <div class="neural-node" style="--x: 20%; --y: 30%"></div>
+                    <div class="neural-node" style="--x: 80%; --y: 20%"></div>
+                    <div class="neural-node" style="--x: 60%; --y: 70%"></div>
+                    <div class="neural-node" style="--x: 40%; --y: 80%"></div>
+                </div>
+            </div>
             
             <div class="container">
                 <div class="row align-items-center min-vh-100">
-                    <div class="col-lg-6">
+                    <div class="col-lg-8">
                         <div class="hero-content" data-aos="fade-up">
-                            <div class="neural-badge">
-                                <i class="fas fa-brain"></i>
-                                <span>Interface Active</span>
+                            <div class="hero-status">
+                                <span class="status-indicator"></span>
+                                <span>Interface Neuronale Active</span>
                             </div>
                             
                             <h1 class="hero-title">
-                                <span class="title-line">Transformation</span>
-                                <span class="title-line highlighted">Logique → Impact</span>
-                                <span class="title-line">Digital Durable</span>
+                                <span class="title-highlight">Bahae</span> Aouanet
                             </h1>
                             
-                            <p class="hero-subtitle">
-                                Ingénieur Full Stack passionné par l'innovation technologique et l'excellence architecturale. 
-                                Je conçois des solutions robustes qui transforment les défis complexes en succès durables.
+                            <div class="hero-subtitle">
+                                <span id="hero-typed"></span>
+                            </div>
+                            
+                            <p class="hero-description">
+                                Je transforme la logique en impact digital durable.
+                                <br>Architecte d'expériences numériques innovantes.
                             </p>
                             
                             <div class="hero-actions">
-                                <button class="btn-primary neural-btn" onclick="scrollToSection('projets')">
-                                    <span>Explorer mes réalisations</span>
-                                    <i class="fas fa-rocket"></i>
-                                </button>
-                                <button class="btn-secondary neural-btn" onclick="scrollToSection('contact')">
-                                    <span>Collaboration</span>
-                                    <i class="fas fa-handshake"></i>
-                                </button>
+                                <a href="#projects" class="btn neural-btn neural-btn-primary">
+                                    <span class="btn-text">Explorer mes créations</span>
+                                    <span class="btn-glow"></span>
+                                </a>
+                                <a href="#contact" class="btn neural-btn neural-btn-outline">
+                                    <span class="btn-text">Initialiser contact</span>
+                                </a>
+                            </div>
+                            
+                            <div class="hero-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number" data-count="50">0</div>
+                                    <div class="stat-label">Projets réalisés</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number" data-count="5">0</div>
+                                    <div class="stat-label">Années d'expérience</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number" data-count="20">0</div>
+                                    <div class="stat-label">Technologies maîtrisées</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="col-lg-6">
-                        <div class="neural-visualization" data-aos="fade-left">
-                            <div class="brain-network">
-                                <div class="network-node main-node">
-                                    <div class="node-core"></div>
-                                    <div class="node-pulse"></div>
-                                </div>
-                                <div class="network-node" style="top: 20%; left: 30%;"></div>
-                                <div class="network-node" style="top: 40%; right: 20%;"></div>
-                                <div class="network-node" style="bottom: 30%; left: 20%;"></div>
-                                <div class="network-node" style="bottom: 20%; right: 30%;"></div>
-                                
-                                <svg class="network-connections">
-                                    <path class="connection" d="M200,200 Q300,150 400,180"></path>
-                                    <path class="connection" d="M200,200 Q150,300 180,400"></path>
-                                    <path class="connection" d="M200,200 Q350,300 380,380"></path>
-                                </svg>
-                            </div>
-                            
-                            <div class="floating-code">
-                                <div class="code-snippet">
-                                    <span class="code-keyword">function</span> 
-                                    <span class="code-function">innovate</span>
-                                    <span class="code-bracket">(</span>
-                                    <span class="code-param">challenge</span>
-                                    <span class="code-bracket">)</span>
+                    <div class="col-lg-4">
+                        <div class="hero-visual" data-aos="fade-left" data-aos-delay="300">
+                            <div class="neural-hologram">
+                                <div class="hologram-ring ring-1"></div>
+                                <div class="hologram-ring ring-2"></div>
+                                <div class="hologram-ring ring-3"></div>
+                                <div class="hologram-core">
+                                    <i class="fas fa-brain"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="scroll-indicator">
-                    <div class="scroll-arrow"></div>
-                    <span>Découvrir</span>
                 </div>
             </div>
         </section>
 
-        <!-- Section Identité -->
-        <section id="identite" class="section-identity">
+        <!-- Identity Section -->
+        <section id="identity" class="section identity-section">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <span class="section-badge">
-                        <i class="fas fa-user-astronaut"></i>
-                        Profil Neuronal
-                    </span>
-                    <h2>Identité Numérique</h2>
-                    <p>Architecture mentale d'un ingénieur full stack passionné</p>
+                    <h2 class="section-title">
+                        <span class="title-icon"><i class="fas fa-user-astronaut"></i></span>
+                        Profil Neural
+                    </h2>
+                    <p class="section-subtitle">Analyse de l'identité numérique</p>
                 </div>
                 
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="profile-card" data-aos="fade-right">
-                            <div class="profile-frame">
-                                <div class="profile-logo">
-                                    <div class="logo-container">
-                                        <span class="logo-letter primary">A</span>
-                                        <span class="logo-letter secondary">B</span>
-                                    </div>
-                                    <div class="logo-pulse"></div>
+                    <div class="col-lg-4" data-aos="fade-right">
+                        <div class="identity-card">
+                            <div class="card-header">
+                                <div class="profile-frame">
+                                    <div class="frame-border"></div>
+                                    <img src="https://via.placeholder.com/300x300" alt="Bahae Aouanet" class="profile-image">
+                                    <div class="scan-overlay"></div>
                                 </div>
-                                <div class="profile-scanner"></div>
                             </div>
                             
-                            <div class="profile-info">
-                                <h3>Bahae Aouanet</h3>
-                                <span class="profile-role">Ingénieur Full Stack</span>
-                                <div class="profile-status">
-                                    <span class="status-dot"></span>
-                                    <span>Disponible pour projets</span>
+                            <div class="card-body">
+                                <h3 class="identity-name">Bahae Aouanet</h3>
+                                <div class="identity-role">Ingénieur Full Stack</div>
+                                <div class="identity-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Maroc, Casablanca</span>
+                                </div>
+                                
+                                <div class="identity-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">98%</span>
+                                        <span class="metric-label">Efficacité</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">95%</span>
+                                        <span class="metric-label">Innovation</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">100%</span>
+                                        <span class="metric-label">Engagement</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="col-lg-8">
-                        <div class="identity-content" data-aos="fade-left">
+                    <div class="col-lg-8" data-aos="fade-left">
+                        <div class="identity-content">
                             <div class="bio-section">
-                                <h4>
-                                    <i class="fas fa-brain"></i>
-                                    Architecture Cognitive
-                                </h4>
+                                <h4>Analyse comportementale</h4>
                                 <p>
-                                    Passionné par l'art de transformer les concepts complexes en solutions élégantes et performantes. 
-                                    Mon approche combine expertise technique approfondie et vision stratégique pour créer des 
-                                    architectures logicielles qui évoluent avec les besoins métier.
+                                    Passionné par l'innovation technologique et l'architecture logicielle, je conçois des solutions 
+                                    numériques qui transforment les défis complexes en opportunités d'impact. Mon approche combine 
+                                    expertise technique approfondie et vision stratégique pour créer des expériences utilisateur 
+                                    exceptionnelles.
                                 </p>
                                 <p>
-                                    Spécialisé dans l'écosystème JavaScript/TypeScript, les architectures cloud-native, 
-                                    et l'implémentation de patterns de conception avancés. Je privilégie les solutions 
-                                    scalables, maintenables et orientées performance.
+                                    Spécialisé dans le développement full stack moderne, l'intelligence artificielle et l'optimisation 
+                                    des performances, j'accompagne les entreprises dans leur transformation digitale en privilégiant 
+                                    l'innovation responsable et la qualité technique.
                                 </p>
                             </div>
                             
                             <div class="values-grid">
-                                <div class="value-item" data-aos="fade-up" data-aos-delay="100">
-                                    <i class="fas fa-rocket"></i>
-                                    <span>Innovation</span>
+                                <div class="value-item" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="value-icon">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <div class="value-content">
+                                        <h5>Innovation</h5>
+                                        <p>Recherche constante de solutions créatives et efficaces</p>
+                                    </div>
                                 </div>
-                                <div class="value-item" data-aos="fade-up" data-aos-delay="200">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <span>Fiabilité</span>
+                                
+                                <div class="value-item" data-aos="zoom-in" data-aos-delay="200">
+                                    <div class="value-icon">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <div class="value-content">
+                                        <h5>Excellence</h5>
+                                        <p>Code propre, architecture robuste, performances optimales</p>
+                                    </div>
                                 </div>
-                                <div class="value-item" data-aos="fade-up" data-aos-delay="300">
-                                    <i class="fas fa-cogs"></i>
-                                    <span>Excellence</span>
+                                
+                                <div class="value-item" data-aos="zoom-in" data-aos-delay="300">
+                                    <div class="value-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="value-content">
+                                        <h5>Collaboration</h5>
+                                        <p>Travail d'équipe et communication transparente</p>
+                                    </div>
                                 </div>
-                                <div class="value-item" data-aos="fade-up" data-aos-delay="400">
-                                    <i class="fas fa-lightbulb"></i>
-                                    <span>Créativité</span>
+                                
+                                <div class="value-item" data-aos="zoom-in" data-aos-delay="400">
+                                    <div class="value-icon">
+                                        <i class="fas fa-leaf"></i>
+                                    </div>
+                                    <div class="value-content">
+                                        <h5>Durabilité</h5>
+                                        <p>Développement responsable et éco-conception</p>
+                                    </div>
                                 </div>
                             </div>
                             
                             <div class="quote-section">
-                                <blockquote>
-                                    "La technologie n'est qu'un outil. En termes de motivation des enfants et de travail avec eux, 
-                                    l'enseignant est le plus important."
-                                    <cite>— Philosophie de développement</cite>
+                                <blockquote class="neural-quote">
+                                    "La technologie n'est puissante que lorsqu'elle sert l'humain. 
+                                    Mon rôle est de créer cette harmonie parfaite."
                                 </blockquote>
                             </div>
                         </div>
@@ -259,246 +288,1030 @@
             </div>
         </section>
 
-        <!-- Section Compétences -->
-        <section id="competences" class="section-skills">
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <span class="section-badge">
-                        <i class="fas fa-code-branch"></i>
-                        Savoir-faire
-                    </span>
-                    <h2>Compétences Techniques</h2>
-                    <p>Exploration des aptitudes et outils maîtrisés</p>
+                    <h2 class="section-title">
+                        <span class="title-icon"><i class="fas fa-microchip"></i></span>
+                        Matrice de Compétences
+                    </h2>
+                    <p class="section-subtitle">Système neuronal d'expertise technique</p>
                 </div>
                 
-                <div class="skills-orbit" data-aos="zoom-in">
-                    <div class="orbit-center">
-                        <i class="fas fa-terminal"></i>
-                        <span>Full Stack</span>
+                <div class="skills-filter" data-aos="fade-up" data-aos-delay="200">
+                    <button class="filter-btn active" data-filter="all">Toutes</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="ai">Intelligence Artificielle</button>
+                    <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
+                </div>
+                
+                <div class="skills-orbital" data-aos="fade-up" data-aos-delay="400">
+                    <div class="orbital-center">
+                        <div class="center-core">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="center-text">Expertise</div>
+                    </div>
+                    
+                    <!-- Frontend Skills -->
+                    <div class="skill-orbit orbit-1">
+                        <div class="skill-node frontend" data-skill="react">
+                            <i class="fab fa-react"></i>
+                            <span class="skill-name">React</span>
+                            <div class="skill-level">95%</div>
+                        </div>
+                        <div class="skill-node frontend" data-skill="vue">
+                            <i class="fab fa-vuejs"></i>
+                            <span class="skill-name">Vue.js</span>
+                            <div class="skill-level">90%</div>
+                        </div>
+                        <div class="skill-node frontend" data-skill="angular">
+                            <i class="fab fa-angular"></i>
+                            <span class="skill-name">Angular</span>
+                            <div class="skill-level">85%</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend Skills -->
+                    <div class="skill-orbit orbit-2">
+                        <div class="skill-node backend" data-skill="nodejs">
+                            <i class="fab fa-node-js"></i>
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-level">95%</div>
+                        </div>
+                        <div class="skill-node backend" data-skill="python">
+                            <i class="fab fa-python"></i>
+                            <span class="skill-name">Python</span>
+                            <div class="skill-level">90%</div>
+                        </div>
+                        <div class="skill-node backend" data-skill="java">
+                            <i class="fab fa-java"></i>
+                            <span class="skill-name">Java</span>
+                            <div class="skill-level">85%</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Skills -->
+                    <div class="skill-orbit orbit-3">
+                        <div class="skill-node mobile" data-skill="react-native">
+                            <i class="fab fa-react"></i>
+                            <span class="skill-name">React Native</span>
+                            <div class="skill-level">90%</div>
+                        </div>
+                        <div class="skill-node mobile" data-skill="flutter">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span class="skill-name">Flutter</span>
+                            <div class="skill-level">85%</div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI Skills -->
+                    <div class="skill-orbit orbit-4">
+                        <div class="skill-node ai" data-skill="tensorflow">
+                            <i class="fas fa-robot"></i>
+                            <span class="skill-name">TensorFlow</span>
+                            <div class="skill-level">80%</div>
+                        </div>
+                        <div class="skill-node ai" data-skill="pytorch">
+                            <i class="fas fa-brain"></i>
+                            <span class="skill-name">PyTorch</span>
+                            <div class="skill-level">75%</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cloud Skills -->
+                    <div class="skill-orbit orbit-5">
+                        <div class="skill-node cloud" data-skill="aws">
+                            <i class="fab fa-aws"></i>
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-level">85%</div>
+                        </div>
+                        <div class="skill-node cloud" data-skill="docker">
+                            <i class="fab fa-docker"></i>
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-level">90%</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-details" id="skill-details">
+                    <div class="detail-content">
+                        <h4 id="detail-title">Sélectionnez une compétence</h4>
+                        <p id="detail-description">Cliquez sur une compétence dans l'orbite pour voir les détails</p>
+                        <div id="detail-projects"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section Projets -->
-        <section id="projets" class="section-projects">
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <span class="section-badge">
-                        <i class="fas fa-project-diagram"></i>
-                        Réalisations
-                    </span>
-                    <h2>Projets Phares</h2>
-                    <p>Démonstration de l'expertise à travers des projets concrets</p>
+                    <h2 class="section-title">
+                        <span class="title-icon"><i class="fas fa-memory"></i></span>
+                        Archive Projets
+                    </h2>
+                    <p class="section-subtitle">Mémoire des réalisations techniques</p>
+                </div>
+                
+                <div class="projects-filter" data-aos="fade-up" data-aos-delay="200">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="web">Web App</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="ai">IA</button>
+                    <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
                 </div>
                 
                 <div class="projects-grid">
-                    <div class="project-card" data-aos="fade-up">
-                        <img src="assets/img/project1.jpg" alt="Project 1" class="project-image">
-                        <div class="project-details">
-                            <h3 class="project-title">Plateforme E-commerce</h3>
-                            <p class="project-description">
-                                Développement d'une plateforme de vente en ligne complète, intégrant gestion des produits, 
-                                panier d'achat, et système de paiement sécurisé.
-                            </p>
-                            <div class="project-tech">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
+                    <!-- Project 1 -->
+                    <div class="project-card web ai" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-3d">
+                            <div class="card-front">
+                                <div class="project-image">
+                                    <img src="https://via.placeholder.com/400x250" alt="Plateforme E-Learning IA">
+                                    <div class="image-overlay">
+                                        <div class="overlay-content">
+                                            <i class="fas fa-eye"></i>
+                                            <span>Analyser</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-category">Web App • IA</div>
+                                    <h3 class="project-title">Plateforme E-Learning IA</h3>
+                                    <p class="project-description">
+                                        Système d'apprentissage adaptatif utilisant l'IA pour personnaliser l'expérience éducative
+                                    </p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">React</span>
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">TensorFlow</span>
+                                        <span class="tech-tag">AWS</span>
+                                    </div>
+                                </div>
                             </div>
-                            <button class="project-detail-btn">
-                                <i class="fas fa-info-circle"></i>
-                                Détails
-                            </button>
+                            <div class="card-back">
+                                <div class="back-content">
+                                    <h4>Détails Techniques</h4>
+                                    <ul>
+                                        <li>Architecture microservices</li>
+                                        <li>Algorithmes de recommandation</li>
+                                        <li>Interface adaptatif React</li>
+                                        <li>API REST sécurisée</li>
+                                        <li>Analytics avancés</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="#" class="btn-link">
+                                            <i class="fab fa-github"></i> Code
+                                        </a>
+                                        <a href="#" class="btn-link">
+                                            <i class="fas fa-external-link-alt"></i> Demo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="assets/img/project2.jpg" alt="Project 2" class="project-image">
-                        <div class="project-details">
-                            <h3 class="project-title">Application Mobile IoT</h3>
-                            <p class="project-description">
-                                Création d'une application mobile pour le contrôle et la surveillance d'appareils IoT, 
-                                avec intégration de données en temps réel et notifications push.
-                            </p>
-                            <div class="project-tech">
-                                <span>React Native</span>
-                                <span>Firebase</span>
-                                <span>Bluetooth</span>
+                    <!-- Project 2 -->
+                    <div class="project-card mobile" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-3d">
+                            <div class="card-front">
+                                <div class="project-image">
+                                    <img src="https://via.placeholder.com/400x250" alt="App Mobile Fintech">
+                                    <div class="image-overlay">
+                                        <div class="overlay-content">
+                                            <i class="fas fa-eye"></i>
+                                            <span>Analyser</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-category">Mobile</div>
+                                    <h3 class="project-title">App Mobile Fintech</h3>
+                                    <p class="project-description">
+                                        Application de gestion financière avec cryptographie avancée et biométrie
+                                    </p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">React Native</span>
+                                        <span class="tech-tag">Node.js</span>
+                                        <span class="tech-tag">MongoDB</span>
+                                        <span class="tech-tag">Blockchain</span>
+                                    </div>
+                                </div>
                             </div>
-                            <button class="project-detail-btn">
-                                <i class="fas fa-info-circle"></i>
-                                Détails
-                            </button>
+                            <div class="card-back">
+                                <div class="back-content">
+                                    <h4>Détails Techniques</h4>
+                                    <ul>
+                                        <li>Authentification biométrique</li>
+                                        <li>Chiffrement end-to-end</li>
+                                        <li>Interface native optimisée</li>
+                                        <li>Synchronisation temps réel</li>
+                                        <li>Conformité RGPD</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="#" class="btn-link">
+                                            <i class="fab fa-github"></i> Code
+                                        </a>
+                                        <a href="#" class="btn-link">
+                                            <i class="fas fa-external-link-alt"></i> Demo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="assets/img/project3.jpg" alt="Project 3" class="project-image">
-                        <div class="project-details">
-                            <h3 class="project-title">Système de Gestion Cloud</h3>
-                            <p class="project-description">
-                                Conception d'un système de gestion d'entreprise basé sur le cloud, offrant des outils 
-                                pour la comptabilité, la gestion des ressources humaines, et le CRM.
-                            </p>
-                            <div class="project-tech">
-                                <span>Vue.js</span>
-                                <span>AWS</span>
-                                <span>GraphQL</span>
+                    <!-- Project 3 -->
+                    <div class="project-card ecommerce web" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-3d">
+                            <div class="card-front">
+                                <div class="project-image">
+                                    <img src="https://via.placeholder.com/400x250" alt="Marketplace B2B">
+                                    <div class="image-overlay">
+                                        <div class="overlay-content">
+                                            <i class="fas fa-eye"></i>
+                                            <span>Analyser</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-category">E-commerce • Web</div>
+                                    <h3 class="project-title">Marketplace B2B</h3>
+                                    <p class="project-description">
+                                        Plateforme e-commerce multi-vendeurs avec gestion avancée des commandes
+                                    </p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Vue.js</span>
+                                        <span class="tech-tag">Laravel</span>
+                                        <span class="tech-tag">MySQL</span>
+                                        <span class="tech-tag">Redis</span>
+                                    </div>
+                                </div>
                             </div>
-                            <button class="project-detail-btn">
-                                <i class="fas fa-info-circle"></i>
-                                Détails
-                            </button>
+                            <div class="card-back">
+                                <div class="back-content">
+                                    <h4>Détails Techniques</h4>
+                                    <ul>
+                                        <li>Architecture multi-tenant</li>
+                                        <li>Système de paiements intégré</li>
+                                        <li>Dashboard analytics</li>
+                                        <li>API marketplace</li>
+                                        <li>Optimisation SEO</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="#" class="btn-link">
+                                            <i class="fab fa-github"></i> Code
+                                        </a>
+                                        <a href="#" class="btn-link">
+                                            <i class="fas fa-external-link-alt"></i> Demo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-card ai web" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-3d">
+                            <div class="card-front">
+                                <div class="project-image">
+                                    <img src="https://via.placeholder.com/400x250" alt="Système de Reconnaissance IA">
+                                    <div class="image-overlay">
+                                        <div class="overlay-content">
+                                            <i class="fas fa-eye"></i>
+                                            <span>Analyser</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-category">IA • Web</div>
+                                    <h3 class="project-title">Système de Reconnaissance IA</h3>
+                                    <p class="project-description">
+                                        Solution de computer vision pour l'analyse automatique d'images médicales
+                                    </p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">OpenCV</span>
+                                        <span class="tech-tag">TensorFlow</span>
+                                        <span class="tech-tag">Flask</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="back-content">
+                                    <h4>Détails Techniques</h4>
+                                    <ul>
+                                        <li>CNN personnalisés</li>
+                                        <li>Traitement temps réel</li>
+                                        <li>Interface web intuitive</li>
+                                        <li>Précision >95%</li>
+                                        <li>Conformité HIPAA</li>
+                                    </ul>
+                                    <div class="project-links">
+                                        <a href="#" class="btn-link">
+                                            <i class="fab fa-github"></i> Code
+                                        </a>
+                                        <a href="#" class="btn-link">
+                                            <i class="fas fa-external-link-alt"></i> Demo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section Parcours -->
-        <section id="parcours" class="section-timeline">
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <span class="section-badge">
-                        <i class="fas fa-history"></i>
-                        Chronologie
-                    </span>
-                    <h2>Parcours Professionnel</h2>
-                    <p>Évolution de carrière et expériences marquantes</p>
+                    <h2 class="section-title">
+                        <span class="title-icon"><i class="fas fa-timeline"></i></span>
+                        Chronologie Neuronale
+                    </h2>
+                    <p class="section-subtitle">Analyse temporelle du parcours professionnel</p>
                 </div>
                 
-                <div class="timeline">
+                <div class="timeline-container" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Experience 1 -->
                     <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-marker">
+                            <div class="marker-ring"></div>
+                            <div class="marker-dot"></div>
+                        </div>
                         <div class="timeline-content">
-                            <span class="timeline-date">2018 - 2020</span>
-                            <h3>Développeur Front-End</h3>
-                            <p>
-                                Participation au développement d'interfaces utilisateur interactives pour des applications web 
-                                complexes, en utilisant React et Redux.
-                            </p>
+                            <div class="timeline-date">2023 - Présent</div>
+                            <div class="timeline-card">
+                                <div class="card-header">
+                                    <div class="company-logo">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                    <div class="company-info">
+                                        <h3 class="position-title">Lead Developer Full Stack</h3>
+                                        <div class="company-name">TechCorp Solutions</div>
+                                        <div class="location">Casablanca, Maroc</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="role-description">
+                                        Direction technique d'une équipe de 8 développeurs sur des projets d'envergure. 
+                                        Architecture de solutions cloud-native et encadrement technique.
+                                    </p>
+                                    <ul class="achievements">
+                                        <li>Réduction des temps de développement de 40%</li>
+                                        <li>Mise en place d'une architecture microservices</li>
+                                        <li>Formation et mentoring de l'équipe</li>
+                                        <li>Optimisation des performances (90% d'amélioration)</li>
+                                    </ul>
+                                    <div class="tech-stack">
+                                        <span class="tech-pill">React</span>
+                                        <span class="tech-pill">Node.js</span>
+                                        <span class="tech-pill">AWS</span>
+                                        <span class="tech-pill">Docker</span>
+                                        <span class="tech-pill">MongoDB</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
+                    <!-- Experience 2 -->
                     <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-marker">
+                            <div class="marker-ring"></div>
+                            <div class="marker-dot"></div>
+                        </div>
                         <div class="timeline-content">
-                            <span class="timeline-date">2020 - 2022</span>
-                            <h3>Ingénieur Back-End</h3>
-                            <p>
-                                Conception et implémentation de services API robustes avec Node.js et Express, optimisation 
-                                des performances et intégration de bases de données.
-                            </p>
+                            <div class="timeline-date">2021 - 2023</div>
+                            <div class="timeline-card">
+                                <div class="card-header">
+                                    <div class="company-logo">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <div class="company-info">
+                                        <h3 class="position-title">Développeur Full Stack Senior</h3>
+                                        <div class="company-name">InnovTech Startup</div>
+                                        <div class="location">Rabat, Maroc</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="role-description">
+                                        Développement de produits SaaS innovants dans un environnement startup dynamique. 
+                                        Responsable technique de l'architecture frontend et backend.
+                                    </p>
+                                    <ul class="achievements">
+                                        <li>Développement de 3 produits SaaS from scratch</li>
+                                        <li>Intégration d'IA dans les solutions développées</li>
+                                        <li>Mise en place CI/CD et DevOps</li>
+                                        <li>Participation active aux décisions produit</li>
+                                    </ul>
+                                    <div class="tech-stack">
+                                        <span class="tech-pill">Vue.js</span>
+                                        <span class="tech-pill">Python</span>
+                                        <span class="tech-pill">PostgreSQL</span>
+                                        <span class="tech-pill">Redis</span>
+                                        <span class="tech-pill">GCP</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
+                    <!-- Experience 3 -->
                     <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-marker">
+                            <div class="marker-ring"></div>
+                            <div class="marker-dot"></div>
+                        </div>
                         <div class="timeline-content">
-                            <span class="timeline-date">2022 - Présent</span>
-                            <h3>Ingénieur Full Stack</h3>
-                            <p>
-                                Responsable de l'architecture complète de plusieurs projets, de la conception à la mise en 
-                                production, avec une approche axée sur la qualité et l'innovation.
-                            </p>
+                            <div class="timeline-date">2019 - 2021</div>
+                            <div class="timeline-card">
+                                <div class="card-header">
+                                    <div class="company-logo">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="company-info">
+                                        <h3 class="position-title">Développeur Full Stack</h3>
+                                        <div class="company-name">WebDev Agency</div>
+                                        <div class="location">Casablanca, Maroc</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="role-description">
+                                        Développement d'applications web et mobile sur mesure pour une clientèle variée. 
+                                        Spécialisation progressive en architectures modernes.
+                                    </p>
+                                    <ul class="achievements">
+                                        <li>25+ projets clients livrés avec succès</li>
+                                        <li>Spécialisation React/React Native</li>
+                                        <li>Optimisation SEO et performances</li>
+                                        <li>Relation client et gestion de projet</li>
+                                    </ul>
+                                    <div class="tech-stack">
+                                        <span class="tech-pill">JavaScript</span>
+                                        <span class="tech-pill">React</span>
+                                        <span class="tech-pill">PHP</span>
+                                        <span class="tech-pill">MySQL</span>
+                                        <span class="tech-pill">WordPress</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Education -->
+                    <div class="timeline-item education" data-aos="fade-left">
+                        <div class="timeline-marker education-marker">
+                            <div class="marker-ring"></div>
+                            <div class="marker-dot">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2017 - 2019</div>
+                            <div class="timeline-card education-card">
+                                <div class="card-header">
+                                    <div class="company-logo">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                    <div class="company-info">
+                                        <h3 class="position-title">Master en Informatique</h3>
+                                        <div class="company-name">École Nationale Supérieure d'Informatique</div>
+                                        <div class="location">Rabat, Maroc</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="role-description">
+                                        Spécialisation en Intelligence Artificielle et Systèmes Distribués. 
+                                        Projet de fin d'études sur l'optimisation d'algorithmes de machine learning.
+                                    </p>
+                                    <ul class="achievements">
+                                        <li>Mention Très Bien (18.5/20)</li>
+                                        <li>Thèse sur l'optimisation des réseaux de neurones</li>
+                                        <li>Stage de recherche en laboratoire IA</li>
+                                        <li>Publication dans une conférence internationale</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section Services -->
-        <section id="services" class="section-services">
+        <!-- Services Section -->
+        <section id="services" class="section services-section">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <span class="section-badge">
-                        <i class="fas fa-handshake"></i>
-                        Expertise
-                    </span>
-                    <h2>Services Offerts</h2>
-                    <p>Solutions sur mesure pour vos besoins technologiques</p>
+                    <h2 class="section-title">
+                        <span class="title-icon"><i class="fas fa-cogs"></i></span>
+                        Modules Activables
+                    </h2>
+                    <p class="section-subtitle">Systèmes d'expertise disponibles</p>
                 </div>
                 
                 <div class="services-grid">
-                    <div class="service-card" data-aos="fade-up">
-                        <i class="fas fa-code"></i>
-                        <h3>Développement Web</h3>
-                        <p>
-                            Création de sites web dynamiques et applications web sur mesure, avec les dernières technologies 
-                            front-end et back-end.
-                        </p>
+                    <!-- Service 1 -->
+                    <div class="service-module" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="module-status">
+                                <span class="status-light active"></span>
+                                <span>Module Actif</span>
+                            </div>
+                        </div>
+                        <div class="module-content">
+                            <h3 class="module-title">Développement Full Stack</h3>
+                            <p class="module-description">
+                                Architecture et développement d'applications web modernes avec les dernières technologies.
+                            </p>
+                            <ul class="module-features">
+                                <li>Applications React/Vue/Angular</li>
+                                <li>APIs REST et GraphQL</li>
+                                <li>Bases de données optimisées</li>
+                                <li>Architecture microservices</li>
+                                <li>Tests automatisés</li>
+                            </ul>
+                            <div class="module-tech">
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">Docker</span>
+                            </div>
+                        </div>
+                        <div class="module-footer">
+                            <button class="module-btn">
+                                <i class="fas fa-power-off"></i>
+                                <span>Activer Module</span>
+                            </button>
+                        </div>
                     </div>
                     
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <i class="fas fa-cloud"></i>
-                        <h3>Solutions Cloud</h3>
-                        <p>
-                            Mise en place et gestion d'infrastructures cloud robustes et scalables, adaptées à vos besoins 
-                            spécifiques.
-                        </p>
+                    <!-- Service 2 -->
+                    <div class="service-module" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="module-status">
+                                <span class="status-light active"></span>
+                                <span>Module Actif</span>
+                            </div>
+                        </div>
+                        <div class="module-content">
+                            <h3 class="module-title">Applications Mobile</h3>
+                            <p class="module-description">
+                                Développement d'applications mobiles natives et cross-platform performantes.
+                            </p>
+                            <ul class="module-features">
+                                <li>React Native / Flutter</li>
+                                <li>Interface utilisateur optimisée</li>
+                                <li>Intégrations API avancées</li>
+                                <li>Performance et sécurité</li>
+                                <li>Publication stores</li>
+                            </ul>
+                            <div class="module-tech">
+                                <span class="tech-badge">React Native</span>
+                                <span class="tech-badge">Flutter</span>
+                                <span class="tech-badge">Swift</span>
+                                <span class="tech-badge">Kotlin</span>
+                            </div>
+                        </div>
+                        <div class="module-footer">
+                            <button class="module-btn">
+                                <i class="fas fa-power-off"></i>
+                                <span>Activer Module</span>
+                            </button>
+                        </div>
                     </div>
                     
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h3>Applications Mobiles</h3>
-                        <p>
-                            Développement d'applications mobiles innovantes pour iOS et Android, avec une expérience utilisateur 
-                            optimisée.
-                        </p>
+                    <!-- Service 3 -->
+                    <div class="service-module" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="module-status">
+                                <span class="status-light active"></span>
+                                <span>Module Actif</span>
+                            </div>
+                        </div>
+                        <div class="module-content">
+                            <h3 class="module-title">Intelligence Artificielle</h3>
+                            <p class="module-description">
+                                Intégration de solutions IA personnalisées pour automatiser et optimiser vos processus.
+                            </p>
+                            <ul class="module-features">
+                                <li>Machine Learning personnalisé</li>
+                                <li>Traitement du langage naturel</li>
+                                <li>Computer Vision</li>
+                                <li>Chatbots intelligents</li>
+                                <li>Analyse prédictive</li>
+                            </ul>
+                            <div class="module-tech">
+                                <span class="tech-badge">TensorFlow</span>
+                                <span class="tech-badge">PyTorch</span>
+                                <span class="tech-badge">OpenAI</span>
+                                <span class="tech-badge">Scikit-learn</span>
+                            </div>
+                        </div>
+                        <div class="module-footer">
+                            <button class="module-btn">
+                                <i class="fas fa-power-off"></i>
+                                <span>Activer Module</span>
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section Contact -->
-        <section id="contact" class="section-contact">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <span class="section-badge">
-                        <i class="fas fa-envelope"></i>
-                        Interaction
-                    </span>
-                    <h2>Contactez-moi</h2>
-                    <p>Discutons de vos projets et de vos besoins</p>
+                    
+                    <!-- Service 4 -->
+                    <div class="service-module" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="module-status">
+                                <span class="status-light active"></span>
+                                <span>Module Actif</span>
+                            </div>
+                        </div>
+                        <div class="module-content">
+                            <h3 class="module-title">Cloud & DevOps</h3>
+                            <p class="module-description">
+                                Déploiement et gestion d'infrastructures cloud sécurisées et scalables.
+                            </p>
+                            <ul class="module-features">
+                                <li>Architecture cloud AWS/GCP</li>
+                                <li>Conteneurisation Docker/K8s</li>
+                                <li>CI/CD automatisé</li>
+                                <li>Monitoring et observabilité</li>
+                                <li>Sécurité et compliance</li>
+                            </ul>
+                            <div class="module-tech">
+                                <span class="tech-badge">AWS</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">Kubernetes</span>
+                                <span class="tech-badge">Terraform</span>
+                            </div>
+                        </div>
+                        <div class="module-footer">
+                            <button class="module-btn">
+                                <i class="fas fa-power-off"></i>
+                                <span>Activer Module</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 5 -->
+                    <div class="service-module" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div class="module-status">
+                                <span class="status-light active"></span>
+                                <span>Module Actif</span>
+                            </div>
+                        </div>
+                        <div class="module-content">
+                            <h3 class="module-title">Formation & Conseil</h3>
+                            <p class="module-description">
+                                Formation technique et conseil stratégique pour la transformation digitale.
+                            </p>
+                            <ul class="module-features">
+                                <li>Formations développement</li>
+                                <li>Audit technique</li>
+                                <li>Conseil en architecture</li>
+                                <li>Accompagnement équipes</li>
+                                <li>Stratégie technologique</li>
+                            </ul>
+                            <div class="module-tech">
+                                <span class="tech-badge">Pédagogie</span>
+                                <span class="tech-badge">Audit</span>
+                                <span class="tech-badge">Stratégie</span>
+                                <span class="tech-badge">Mentoring</span>
+                            </div>
+                        </div>
+                        <div class="module-footer">
+                            <button class="module-btn">
+                                <i class="fas fa-power-off"></i>
+                                <span>Activer Module</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 6 -->
+                    <div class="service-module" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="module-status">
+                                <span class="status-light standby"></span>
+                                <span>Mode Collaboration</span>
+                            </div>
+                        </div>
+                        <div class="module-content">
+                            <h3 class="module-title">Partenariat Stratégique</h3>
+                            <p class="module-description">
+                                Collaboration long terme pour accompagner votre croissance technologique.
+                            </p>
+                            <ul class="module-features">
+                                <li>CTO externe à temps partiel</li>
+                                <li>Supervision technique</li>
+                                <li>Roadmap technologique</li>
+                                <li>Gestion d'équipes tech</li>
+                                <li>Innovation continue</li>
+                            </ul>
+                            <div class="module-tech">
+                                <span class="tech-badge">Leadership</span>
+                                <span class="tech-badge">Innovation</span>
+                                <span class="tech-badge">Stratégie</span>
+                                <span class="tech-badge">Croissance</span>
+                            </div>
+                        </div>
+                        <div class="module-footer">
+                            <button class="module-btn collaboration">
+                                <i class="fas fa-rocket"></i>
+                                <span>Initier Collaboration</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" data-aos="fade-up">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" required>
-                            <label for="name">Nom</label>
-                            <span class="input-highlight"></span>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" required>
-                            <label for="email">Email</label>
-                            <span class="input-highlight"></span>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone">
-                            <label for="phone">Téléphone (optionnel)</label>
-                            <span class="input-highlight"></span>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                            <label for="message">Message</label>
-                            <span class="input-highlight"></span>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn neural-btn btn-primary">
-                            Envoyer le message
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
+                <div class="services-cta" data-aos="fade-up" data-aos-delay="700">
+                    <div class="cta-content">
+                        <h3>Prêt à transformer vos idées en réalité ?</h3>
+                        <p>Collaborons pour créer des solutions exceptionnelles</p>
+                        <a href="#contact" class="btn neural-btn neural-btn-primary large">
+                            <span class="btn-text">Travaillons ensemble</span>
+                            <span class="btn-glow"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">
+                        <span class="title-icon"><i class="fas fa-satellite-dish"></i></span>
+                        Interface de Communication
+                    </h2>
+                    <p class="section-subtitle">Établissement de connexion sécurisée</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-8" data-aos="fade-right">
+                        <div class="contact-form-wrapper">
+                            <div class="form-header">
+                                <h3>Transmission de données</h3>
+                                <p>Initialisez le protocole de communication</p>
+                            </div>
+                            
+                            <form id="contact-form" class="neural-form">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">
+                                            <i class="fas fa-user"></i>
+                                            Identité
+                                        </label>
+                                        <input type="text" id="name" name="name" class="form-control neural-input" required>
+                                        <div class="input-scanner"></div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">
+                                            <i class="fas fa-envelope"></i>
+                                            Canal de retour
+                                        </label>
+                                        <input type="email" id="email" name="email" class="form-control neural-input" required>
+                                        <div class="input-scanner"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">
+                                        <i class="fas fa-tag"></i>
+                                        Objet de la transmission
+                                    </label>
+                                    <select id="subject" name="subject" class="form-control neural-select" required>
+                                        <option value="">Sélectionner le type de mission</option>
+                                        <option value="project">Nouveau projet</option>
+                                        <option value="collaboration">Collaboration</option>
+                                        <option value="consulting">Conseil technique</option>
+                                        <option value="formation">Formation</option>
+                                        <option value="other">Autre</option>
+                                    </select>
+                                    <div class="input-scanner"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="budget" class="form-label">
+                                        <i class="fas fa-euro-sign"></i>
+                                        Budget estimé
+                                    </label>
+                                    <select id="budget" name="budget" class="form-control neural-select">
+                                        <option value="">Budget du projet</option>
+                                        <option value="small">&lt; 5K €</option>
+                                        <option value="medium">5K - 15K €</option>
+                                        <option value="large">15K - 50K €</option>
+                                        <option value="enterprise">&gt; 50K €</option>
+                                    </select>
+                                    <div class="input-scanner"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message" class="form-label">
+                                        <i class="fas fa-comment-dots"></i>
+                                        Données du projet
+                                    </label>
+                                    <textarea id="message" name="message" class="form-control neural-textarea" rows="6" required placeholder="Décrivez votre projet, vos objectifs et vos contraintes techniques..."></textarea>
+                                    <div class="input-scanner"></div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="submit" class="btn neural-btn neural-btn-primary full-width">
+                                        <span class="btn-text">
+                                            <i class="fas fa-paper-plane"></i>
+                                            Transmettre les données
+                                        </span>
+                                        <span class="btn-glow"></span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4" data-aos="fade-left" data-aos-delay="200">
+                        <div class="contact-info">
+                            <div class="info-header">
+                                <h3>Canaux de communication</h3>
+                                <p>Moyens de connexion disponibles</p>
+                            </div>
+                            
+                            <div class="contact-methods">
+                                <div class="contact-method">
+                                    <div class="method-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="method-content">
+                                        <h4>Email</h4>
+                                        <p>bahae.aouanet@example.com</p>
+                                        <div class="method-status">
+                                            <span class="status-indicator active"></span>
+                                            <span>Réponse < 24h</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-method">
+                                    <div class="method-icon">
+                                        <i class="fab fa-linkedin"></i>
+                                    </div>
+                                    <div class="method-content">
+                                        <h4>LinkedIn</h4>
+                                        <p>linkedin.com/in/bahae-aouanet</p>
+                                        <div class="method-status">
+                                            <span class="status-indicator active"></span>
+                                            <span>Professionnel</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-method">
+                                    <div class="method-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div class="method-content">
+                                        <h4>GitHub</h4>
+                                        <p>github.com/bahae-aouanet</p>
+                                        <div class="method-status">
+                                            <span class="status-indicator active"></span>
+                                            <span>Code source</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-method">
+                                    <div class="method-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="method-content">
+                                        <h4>Téléphone</h4>
+                                        <p>+212 6XX XXX XXX</p>
+                                        <div class="method-status">
+                                            <span class="status-indicator standby"></span>
+                                            <span>Sur rendez-vous</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="availability-status">
+                                <h4>Statut de disponibilité</h4>
+                                <div class="status-card">
+                                    <div class="status-indicator active"></div>
+                                    <div class="status-content">
+                                        <span class="status-text">Disponible pour nouveaux projets</span>
+                                        <span class="status-detail">Prochaine ouverture : Immédiate</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cv-download">
+                                <a href="#" class="btn neural-btn neural-btn-outline full-width" id="download-cv">
+                                    <span class="btn-text">
+                                        <i class="fas fa-download"></i>
+                                        Télécharger CV
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="neural-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="footer-brand">
+                                <div class="brand-logo">BA</div>
+                                <h4>Bahae Aouanet</h4>
+                                <p>Interface neuronale d'expertise technique</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <div class="footer-links">
+                                <h5>Navigation</h5>
+                                <ul>
+                                    <li><a href="#identity">Identité</a></li>
+                                    <li><a href="#skills">Compétences</a></li>
+                                    <li><a href="#projects">Projets</a></li>
+                                    <li><a href="#experience">Parcours</a></li>
+                                    <li><a href="#services">Services</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <div class="footer-social">
+                                <h5>Réseaux</h5>
+                                <div class="social-links">
+                                    <a href="#" class="social-link">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="#" class="social-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="social-link">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-link">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-bottom">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>&copy; 2024 Bahae Aouanet. Interface neuronale sous licence premium.</p>
+                            </div>
+                            <div class="col-md-6 text-end">
+                                <p>Développé avec passion • Version 2.1.0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="assets/js/script.js"></script>
