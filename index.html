@@ -62,6 +62,9 @@
                     <a href="#hero" class="nav-link" data-section="identity">
                         <i class="fas fa-brain"></i><span>Identité</span>
                     </a>
+                    <a href="#skills" class="nav-link" data-section="skills">
+                        <i class="fas fa-microchip"></i><span>Savoir-faire</span>
+                    </a>
 
                     <a href="#projects" class="nav-link" data-section="projects">
                         <i class="fas fa-memory"></i><span>Projets</span>
@@ -144,15 +147,15 @@
 
                     <div class="hero-stats">
                         <div class="stat-item">
-                            <div class="stat-number" data-count="50">0</div>
+                            <div class="stat-number" data-count="+15">0</div>
                             <div class="stat-label">Projets réalisés</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number" data-count="5">0</div>
+                            <div class="stat-number" data-count="+3">0</div>
                             <div class="stat-label">Années d'expérience</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number" data-count="20">0</div>
+                            <div class="stat-number" data-count="+13">0</div>
                             <div class="stat-label">Technologies maîtrisées</div>
                         </div>
                     </div>
@@ -220,6 +223,115 @@
         </div>
     </div>
 </section>
+
+ <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">
+                        <span class="title-icon"><i class="fas fa-microchip"></i></span>
+                        Matrice de Compétences
+                    </h2>
+                    <p class="section-subtitle">Système neuronal d'expertise technique</p>
+                </div>
+                
+                <div class="skills-filter" data-aos="fade-up" data-aos-delay="200">
+                    <button class="filter-btn active" data-filter="all">Toutes</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="ai">Intelligence Artificielle</button>
+                    <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
+                </div>
+                
+                <div class="skills-orbital" data-aos="fade-up" data-aos-delay="400">
+                    <div class="orbital-center">
+                        <div class="center-core">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="center-text">Expertise</div>
+                    </div>
+                    
+                    <!-- Frontend Skills -->
+                    <div class="skill-orbit orbit-1">
+                        <div class="skill-node frontend" data-skill="react">
+                            <i class="fab fa-react"></i>
+                            <span class="skill-name">React</span>
+                            <div class="skill-level">95%</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend Skills -->
+                    <div class="skill-orbit orbit-2">
+                        <div class="skill-node backend" data-skill="nodejs">
+                            <i class="fab fa-node-js"></i>
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-level">95%</div>
+                        </div>
+                        <div class="skill-node backend" data-skill="python">
+                            <i class="fab fa-python"></i>
+                            <span class="skill-name">Python</span>
+                            <div class="skill-level">90%</div>
+                        </div>
+                        <div class="skill-node backend" data-skill="java">
+                            <i class="fab fa-java"></i>
+                            <span class="skill-name">Java</span>
+                            <div class="skill-level">85%</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Skills -->
+                    <div class="skill-orbit orbit-3">
+                        <div class="skill-node mobile" data-skill="react-native">
+                            <i class="fab fa-react"></i>
+                            <span class="skill-name">React Native</span>
+                            <div class="skill-level">90%</div>
+                        </div>
+                        <div class="skill-node mobile" data-skill="flutter">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span class="skill-name">Flutter</span>
+                            <div class="skill-level">85%</div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI Skills -->
+                    <div class="skill-orbit orbit-4">
+                        <div class="skill-node ai" data-skill="tensorflow">
+                            <i class="fas fa-robot"></i>
+                            <span class="skill-name">TensorFlow</span>
+                            <div class="skill-level">80%</div>
+                        </div>
+                        <div class="skill-node ai" data-skill="pytorch">
+                            <i class="fas fa-brain"></i>
+                            <span class="skill-name">PyTorch</span>
+                            <div class="skill-level">75%</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cloud Skills -->
+                    <div class="skill-orbit orbit-5">
+                        <div class="skill-node cloud" data-skill="aws">
+                            <i class="fab fa-aws"></i>
+                            <span class="skill-name">Google Cloud</span>
+                            <div class="skill-level">85%</div>
+                        </div>
+                        <div class="skill-node cloud" data-skill="docker">
+                            <i class="fab fa-docker"></i>
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-level">90%</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-details" id="skill-details">
+                    <div class="detail-content">
+                        <h4 id="detail-title">Sélectionnez une compétence</h4>
+                        <p id="detail-description">Cliquez sur une compétence dans l'orbite pour voir les détails</p>
+                        <div id="detail-projects"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Projects Section -->
 <section id="projects" class="section projects-section">
@@ -1224,6 +1336,47 @@
         </span>
     </a>
 </div>
+
+<script>
+document.getElementById('download-cv').addEventListener('click', function(e) {
+    // Empêche le comportement par défaut
+    e.preventDefault();
+    
+    const fileUrl = this.getAttribute('href');
+    const fileName = this.getAttribute('download');
+    
+    // Solution avec fetch pour une meilleure gestion
+    fetch(fileUrl)
+        .then(response => {
+            if (!response.ok) throw new Error();
+            return response.blob();
+        })
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = fileName;
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            link.click();
+            
+            // Nettoyage
+            setTimeout(() => {
+                window.URL.revokeObjectURL(url);
+                document.body.removeChild(link);
+            }, 100);
+        })
+        .catch(() => {
+            // Solution de repli silencieuse
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+});
+</script>
 
 
                 </div>
