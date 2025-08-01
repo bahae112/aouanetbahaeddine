@@ -275,10 +275,10 @@ function initializeHeroTyping() {
     
     if (heroTyped) {
         const heroTexts = [
-            'Ingénieur Full Stack Expert',
-            'Architecte de Solutions Digitales',
-            'Spécialiste Intelligence Artificielle',
-            'Créateur d\'Expériences Innovantes'
+            "Développeur Full Stack en formation",
+  "Concepteur d’applications digitales",
+  "Passionné par l’IA et l’innovation",
+  "Créateur de solutions utiles et modernes"
         ];
         
         new Typed(heroTyped, {
